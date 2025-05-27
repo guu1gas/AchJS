@@ -1,7 +1,6 @@
-// tracker.js
 (function() {
-  const queue = window._ptrack = window._ptrack || [];
-  const accountId = "YOUR_ACCOUNT_ID"; // Fallback if not set via push
+  let queue = window._ptrack = window._ptrack || [];
+  let accountId = "dedault_email"; // Fallback if not set via push
   
   function processQueue() {
     while (queue.length) {
