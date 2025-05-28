@@ -1,6 +1,6 @@
 (function() {
   let queue = window._ptrack = window._ptrack || [];
-  let accountId = "dedault_email"; // Fallback if not set via push
+  let accountId = "dedault_email";
   
   function processQueue() {
     while (queue.length) {
@@ -26,7 +26,7 @@
       ...data
     };
     
-    fetch("http://127.0.0.1:8000/track", {
+    fetch("http://185.202.223.81:5002/track", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
